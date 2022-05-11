@@ -1,0 +1,38 @@
+#slide-show{
+  display: grid;
+  margin: 40px auto ;
+  width: 50%;
+  height: 340px;  
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+} 
+.mySlides img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+* {box-sizing:border-box} 
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 844px){
+  #slide-show{
+  width: 85%;
+  }
+}
+
