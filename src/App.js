@@ -7,7 +7,6 @@ const App = () => {
     <>
       <Routes>
         <Route exact path='/' element={<Home />} />
-
       </Routes>
     </>
   );
