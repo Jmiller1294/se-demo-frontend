@@ -11,18 +11,20 @@ export const Nav = styled.nav`
   align-items: center;
   height: 55px;
   padding: 0 120px;
-  font-weight: bold;
+  font-weight: 900;
   background-color: #000000;
 `
 export const NavLink = styled(Link)`
-  padding-bottom: 10px;
   color: #ffffff;
+  height: 55px;
+  padding: 20px;
+
   text-decoration: none;
   letter-spacing: 2.5px;
-  border: 2px solid transparent;
 
   &:hover {
-   
+   background-color: #ffffff;
+   color: #000000;
   }
 
  

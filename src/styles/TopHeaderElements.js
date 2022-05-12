@@ -8,10 +8,12 @@ export const Header = styled.header`
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  height: 55px;
-  padding: 0 285px;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0 220px;
   font-weight: bold;
   background-color: #000000;
+  border-bottom: 1px solid #ffffff;
 `
 export const Title = styled.h1`
   justify-self: left;

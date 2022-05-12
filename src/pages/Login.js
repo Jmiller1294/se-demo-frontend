@@ -8,19 +8,6 @@ import '../styles/Slideshow.css';
 const Login = () => {
   return (
     <>
-      <div class = "topnav">
-        <div id = "title">
-            <h1>First Responder Equipment</h1>
-        </div>
-        <div class="search">
-            <input class = "search" type="text" placeholder="Search.."/>
-        </div>
-        <div class="links">
-            <a href="/">Home</a>
-            <a href="/login">Login</a>
-            <a href="/contact">Contact</a>
-        </div>  
-      </div>
       <form action="">
         <div class="container">
            <h1>Costumer Sign-in</h1>

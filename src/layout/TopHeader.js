@@ -1,6 +1,7 @@
 import React from 'react';
-//import { useLocation } from 'react-router';
 import { Header, Title } from '../styles/TopHeaderElements';
+import SearchBar from '../components/SearchBar';
+
 
 
 const TopHeader = (props) => {
@@ -9,6 +10,7 @@ const TopHeader = (props) => {
     <>
       <Header>
         <Title>First Responder Equipment</Title>
+        <SearchBar />
       </Header>
     </>
   )

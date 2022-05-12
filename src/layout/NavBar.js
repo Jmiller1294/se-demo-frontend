@@ -1,6 +1,6 @@
 import React from 'react';
 //import { useLocation } from 'react-router';
-import { Nav, NavLink, NavBtn, NavBtnLink, ScrollLink } from '../styles/NavBarElements';
+import { Nav, NavLink } from '../styles/NavBarElements';
 
 
 const NavBar = (props) => {
@@ -10,7 +10,8 @@ const NavBar = (props) => {
       <Nav {...props}>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/">Contact</NavLink>
-        <NavLink to="/">Login</NavLink>
+        <NavLink to="/">About</NavLink>
+        <NavLink to="/login">Login</NavLink>
       </Nav>
     </>
   )
