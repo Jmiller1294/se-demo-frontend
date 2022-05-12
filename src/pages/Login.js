@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 
@@ -55,19 +55,34 @@ const AdminLink = styled.a`
 `
 
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  }
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  }
+
+  const handleSubmit = (event) => {
+    alert('submitted!' + email + ':' + password);
+    event.preventDefault();
+  }
+
+
   return (
     <>
       <LoginForm>
         <Header>Customer Sign-in</Header>
-            
             <Label for="email"><b>Email</b></Label><br />
-            <Input type="text" placeholder="Enter Email" name="email" required />
+            <Input onChange={(e) => handleEmailChange(e)} type="text" placeholder="Enter Email" name="email" required />
             <br />
             <Label for="psw"><b>Password</b></Label><br />
-            <Input type="password" placeholder="Enter Password" name="psw" required />
-            <SubmitButton type="submit">Submit</SubmitButton>
-            <AdminLink href="admin-sign-in.html"><h2>Administer Login</h2></AdminLink>
-          
+            <Input onChange={(e) => handlePasswordChange(e)} type="password" placeholder="Enter Password" name="psw" required />
+            <SubmitButton onClick={(e) => handleSubmit(e)}type="submit">Submit</SubmitButton>
+            <AdminLink href="/admin-login"><h2>Administer Login</h2></AdminLink>
       </LoginForm>
     </>
   )
