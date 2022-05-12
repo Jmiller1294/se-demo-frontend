@@ -39,13 +39,13 @@ button:hover {
 
 /* Add padding to container elements */
 .container {
-  margin: 40px auto ;
+  
+}margin: 40px auto ;
   border-color: black;
   width: 35%;
   height: 480px;  
   border: solid;
   border-width: 2px;
-}
 
 .admin{
     text-decoration: none;

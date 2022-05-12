@@ -1,28 +1,74 @@
 import React from "react";
-import '../styles/Home.css';
-import '../styles/Style.css';
-import '../styles/Form.css';
-import '../styles/Slideshow.css';
+import styled from "styled-components";
 
+
+const LoginForm = styled.form`
+  background: white;
+  border: 1px solid #dedede;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px auto;
+  width: 550px;
+  padding: 30px 75px;
+`
+const Header = styled.h1`
+  margin-top: 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+`
+const Label = styled.label`
+  color: #3d3d3d;
+  display: block;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+`
+const Input = styled.input`
+  border: none;
+  background: #f1f1f1;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  height: 45px;
+`
+const SubmitButton = styled.button`
+  height: 45px;
+  width: 50%;
+  background-color: #e92c2c;
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+  margin: 20px auto;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  border-radius: 10px;
+
+  &:hover {
+    opacity:1;
+  }
+`
+const AdminLink = styled.a`
+`
 
 const Login = () => {
   return (
     <>
-      <form action="">
-        <div class="container">
-           <h1>Costumer Sign-in</h1>
-           <hr />
-           <label class ="form-lable" for="email"><b>Email</b></label><br />
-           <input type="text" placeholder="Enter Email" name="email" required />
-           <br />
-           <label class ="form-lable" for="psw"><b>Password</b></label><br />
-           <input type="password" placeholder="Enter Password" name="psw" required />
-           <div class="submit-button">
-            <button type="submit" class="signup-button">Submit</button>
-          </div>
-          <a class="admin" href="admin-sign-in.html"><h2>Administer Login</h2></a>
-        </div>
-      </form>
+      <LoginForm>
+        <Header>Customer Sign-in</Header>
+            
+            <Label for="email"><b>Email</b></Label><br />
+            <Input type="text" placeholder="Enter Email" name="email" required />
+            <br />
+            <Label for="psw"><b>Password</b></Label><br />
+            <Input type="password" placeholder="Enter Password" name="psw" required />
+            <SubmitButton type="submit">Submit</SubmitButton>
+            <AdminLink href="admin-sign-in.html"><h2>Administer Login</h2></AdminLink>
+          
+      </LoginForm>
     </>
   )
 }

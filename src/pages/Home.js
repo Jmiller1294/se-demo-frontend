@@ -14,8 +14,8 @@ const Banner = styled.div`
 `
 
 const BannerImg = styled.img`
-  height: 400px;
-  flex-basis: 80%;
+  height: 350px;
+  flex-basis: 85%;
 `
 
 

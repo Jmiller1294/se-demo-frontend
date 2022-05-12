@@ -11,6 +11,7 @@ const SearchInput = styled.input`
   height: 45px;  
   flex-basis: 100%;
   margin: 0;
+  border-radius: 5px;
 `
 
 const SearchBar = () => {

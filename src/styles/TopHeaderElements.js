@@ -13,7 +13,7 @@ export const Header = styled.header`
   padding: 0 220px;
   font-weight: bold;
   background-color: #000000;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #656565;
 `
 export const Title = styled.h1`
   justify-self: left;
@@ -39,6 +39,7 @@ export const NavBtnLink = styled(Link)`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   justify-content: center;
+
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
