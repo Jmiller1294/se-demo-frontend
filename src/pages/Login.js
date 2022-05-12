@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-
+import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 const LoginForm = styled.form`
   background: white;
@@ -54,9 +55,21 @@ const SubmitButton = styled.button`
 const AdminLink = styled.a`
 `
 
-const Login = () => {
+const Login = (props) => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  useEffect(() => {
+    if(loggedIn) {
+      console.log('logged in')
+      navigate('/');
+    } 
+    else {
+      console.log('not signed in');
+    }
+  }, [loggedIn, navigate])
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -67,8 +80,17 @@ const Login = () => {
   }
 
   const handleSubmit = (event) => {
-    alert('submitted!' + email + ':' + password);
     event.preventDefault();
+    
+    const data = {
+      email: email,
+      password: password
+    }
+
+    axios.post('http://localhost:8000/users/login', { data })
+      .then(resp => {
+        setLoggedIn(resp.data);
+      })
   }
 
 
