@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from 'axios';
 
 const LoginForm = styled.form`
-  background: white;
   border: 1px solid #dedede;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 50px auto;
+  height: 500px;
   width: 550px;
   padding: 30px 75px;
 `
@@ -53,6 +53,9 @@ const SubmitButton = styled.button`
   }
 `
 const AdminLink = styled.a`
+  font-size: 30px;
+  height: 100px;
+  
 `
 
 const Login = (props) => {
@@ -60,16 +63,18 @@ const Login = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
+  const [currentUser, setCurrentUser] = useState({});
 
   useEffect(() => {
     if(loggedIn) {
-      console.log('logged in')
-      navigate('/');
+      console.log(currentUser);
+      if(currentUser.organization === 'fire') navigate('/fire-products');
+      if(currentUser.organization === 'police') navigate('/police-products');
     } 
     else {
       console.log('not signed in');
     }
-  }, [loggedIn, navigate])
+  }, [loggedIn, navigate, currentUser])
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -89,7 +94,8 @@ const Login = (props) => {
 
     axios.post('http://localhost:8000/users/login', { data })
       .then(resp => {
-        setLoggedIn(resp.data);
+        setLoggedIn(resp.data.loggedIn);
+        setCurrentUser(resp.data.user);
       })
   }
 
@@ -104,7 +110,9 @@ const Login = (props) => {
             <Label for="psw"><b>Password</b></Label><br />
             <Input onChange={(e) => handlePasswordChange(e)} type="password" placeholder="Enter Password" name="psw" required />
             <SubmitButton onClick={(e) => handleSubmit(e)}type="submit">Submit</SubmitButton>
-            <AdminLink href="/admin-login"><h2>Administer Login</h2></AdminLink>
+            <div>
+              <AdminLink href="/">lkdkdk</AdminLink>
+            </div>
       </LoginForm>
     </>
   )
