@@ -1,14 +1,17 @@
 import React from "react";
+import SideBar from "../layout/SideBar";
 import { Grid, Row, Col } from '../layout/Grid';
 import '../styles/Style.css';
 import '../styles/Shopping.css'
+
+const fireProducts = ['GOGGLES', 'HELMETS', 'JACKETS'];
 
 const FireProducts = () => {
   return (
     <Grid>
       <Row>
         <Col size={1}>
-          
+          <SideBar products={fireProducts}/>
         </Col>
         <Col size={1}>
           <div id="product_grid">
@@ -71,10 +74,6 @@ const FireProducts = () => {
         </Col>
       </Row>
     </Grid>
-
-
-  
-
   )
 }
 export default FireProducts;
