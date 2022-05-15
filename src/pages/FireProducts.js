@@ -1,10 +1,11 @@
 import React from "react";
 import SideBar from "../layout/SideBar";
 import { Grid, Row, Col } from '../layout/Grid';
+import { fireProducts, policeProducts } from '../data/data';
 import '../styles/Style.css';
 import '../styles/Shopping.css'
 
-const fireProducts = ['GOGGLES', 'HELMETS', 'JACKETS'];
+
 
 const FireProducts = () => {
   return (

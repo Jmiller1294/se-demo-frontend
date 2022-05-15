@@ -4,7 +4,20 @@ import SideBar from "../layout/SideBar";
 import '../styles/Style.css';
 import '../styles/Shopping.css'
 
-const policeProducts = ['TASERS', 'VISORS', 'VESTS'];
+const policeProducts = [
+  {
+    product: 'TASERS',
+    url: '/police-products/tasers'
+  },
+  {
+    product: 'VESTS',
+    url: '/police-products/vests'
+  },
+  {
+    product: 'VISORS',
+    url: '/police-products/visors'
+  },
+];
 
 const PoliceProducts = () => {
   return (

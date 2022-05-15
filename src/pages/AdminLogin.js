@@ -58,7 +58,7 @@ const AdminLink = styled.a`
   
 `
 
-const Login = (props) => {
+const AdminLogin = (props) => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -67,9 +67,7 @@ const Login = (props) => {
 
   useEffect(() => {
     if(loggedIn) {
-      console.log(currentUser);
-      if(currentUser.organization === 'fire') navigate('/fire-products');
-      if(currentUser.organization === 'police') navigate('/police-products');
+      if(currentUser) navigate('/admin');
     } 
     else {
       console.log('not signed in');
@@ -92,10 +90,10 @@ const Login = (props) => {
       password: password
     }
 
-    axios.post('http://localhost:8000/users/login', { data })
+    axios.post('http://localhost:8000/users/admin-login', { data })
       .then(resp => {
         setLoggedIn(resp.data.loggedIn);
-        setCurrentUser(resp.data.user);
+        setCurrentUser(resp.data.admin);
       })
   }
 
@@ -103,7 +101,7 @@ const Login = (props) => {
   return (
     <>
       <LoginForm>
-        <Header>Customer Sign-in</Header>
+        <Header>Admin Sign-in</Header>
             <Label for="email"><b>Email</b></Label><br />
             <Input onChange={(e) => handleEmailChange(e)} type="text" placeholder="Enter Email" name="email" required />
             <br />
@@ -111,10 +109,10 @@ const Login = (props) => {
             <Input onChange={(e) => handlePasswordChange(e)} type="password" placeholder="Enter Password" name="psw" required />
             <SubmitButton onClick={(e) => handleSubmit(e)}type="submit">Submit</SubmitButton>
             <div>
-              <AdminLink href="/admin-login">lkdkdk</AdminLink>
+              <AdminLink href="/">lkdkdk</AdminLink>
             </div>
       </LoginForm>
     </>
   )
 }
-export default Login;
+export default AdminLogin;

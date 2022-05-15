@@ -15,7 +15,7 @@ const Category = styled.h2`
 const SideBar = (props) => {
   return (
     <Container>
-      {props.products.map(product => <Category>{product}</Category>)}
+      {props.products.map(product => <a href={product.url}><Category>{product.product}</Category></a>)}
     </Container>
   )
 }
