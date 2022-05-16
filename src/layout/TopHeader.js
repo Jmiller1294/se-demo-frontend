@@ -11,6 +11,7 @@ const TopHeader = (props) => {
       <Header>
         <Title>First Responder Equipment</Title>
         <SearchBar />
+        Hello
       </Header>
     </>
   )
