@@ -6,7 +6,7 @@ const Container = styled.div`
   flex-direction: column;
   background-color: #212121;
   color: #d3d3d3;
-  height: 800px;
+  height: 1000px;
   width: 100%;
   padding-top: 55px;
   line-height: 2.5;
@@ -19,7 +19,7 @@ const AdminSideBar = (props) => {
     <Container>
       <Category>Home</Category>
       <Category>All Products</Category>
-      <Category>Users</Category>
+      <Category>All Users</Category>
       <Category>All Orders</Category>
       <Category></Category>
     </Container>

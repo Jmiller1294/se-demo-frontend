@@ -67,16 +67,27 @@ const InformationForm = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px;
-  width: 100%;
+  height: 150px;
+  flex-basis: 100%;
 `
 const FormInput = styled.input`
   height: 50px;
-  width: 25%;
+  flex-basis: 40%;
 `
 const FormButton = styled.button`
   height: 50px;
-  width: 10%;
+  flex-basis: 10%;
+  margin-bottom: 20px;
+  background-color: #e92c2c;
+  color: white;
+  font-family: sans-serif;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+`
+const ContactHeader = styled.h1`
+  margin-top: 100px;
 `
 
 
@@ -162,8 +173,9 @@ const Home = () => {
         </Row>
         <Row  height={'400px'}>
           <Col size={1}>
+            <ContactHeader>Want To Learn More?</ContactHeader>
             <InformationForm>
-              <FormInput type='text' />
+              <FormInput type='text' placeholder="Enter Email"/>
               <FormButton>Submit</FormButton>
             </InformationForm>
           </Col>
