@@ -12,7 +12,7 @@ export const Nav = styled.nav`
   height: 55px;
   padding: 0 120px;
   font-weight: 900;
-  background-color: #000000;
+  background-color: #00264D;
 `
 export const NavLink = styled(Link)`
   color: #ffffff;

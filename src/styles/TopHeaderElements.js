@@ -12,7 +12,7 @@ export const Header = styled.header`
   height: 100px;
   padding: 0 220px;
   font-weight: bold;
-  background-color: #000000;
+  background-color: #00264D;
   border-bottom: 1px solid #656565;
 `
 export const Title = styled.h1`

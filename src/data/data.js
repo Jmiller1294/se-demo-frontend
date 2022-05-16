@@ -1,4 +1,8 @@
-export const fireProducts = [
+export const fireCatagories = [
+  {
+    product: 'ALL PRODUCTS',
+    url: '/fire-products'
+  },
   {
     product: 'GOGGLES',
     url: '/fire-products/goggles'
@@ -13,7 +17,11 @@ export const fireProducts = [
   },
 ];
 
-export const policeProducts = [
+export const policeCategories = [
+  {
+    product: 'ALL PRODUCTS',
+    url: '/police-products'
+  },
   {
     product: 'TASERS',
     url: '/police-products/tasers'
@@ -24,6 +32,45 @@ export const policeProducts = [
   },
   {
     product: 'VISORS',
+    url: '/police-products/visors'
+  },
+];
+
+export const fireProducts = [
+  {
+    name: 'Taser 3000',
+    
+  },
+  {
+    name: 'Vest 3000',
+    
+  },
+  {
+    name: 'Visor 3000',
+    
+  },
+  {
+    name: 'Taser 3000',
+    
+  },
+  {
+    name: 'Vest 3000',
+    
+  },
+  {
+    name: 'Visor 3000',
+    
+  },
+  {
+    name: 'Taser 3000',
+    
+  },
+  {
+    name: 'Vest 3000',
+    
+  },
+  {
+    name: 'Visor 3000',
     url: '/police-products/visors'
   },
 ];

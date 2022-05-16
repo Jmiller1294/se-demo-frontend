@@ -1,15 +1,18 @@
 import React from "react";
 import SideBar from "../layout/SideBar";
-import { fireProducts } from "../data/data";
-
+import { fireCatagories, fireProducts } from "../data/data";
+import NavBar from "../layout/NavBar";
+import TopHeader from "../layout/TopHeader";
 import { Grid, Row, Col } from "../layout/Grid";
 
 const Goggles = () => {
   return(
     <Grid>
+      <TopHeader />
+      <NavBar />
       <Row>
         <Col size={1}>
-          <SideBar products={fireProducts}/>
+          <SideBar products={fireCatagories}/>
         </Col>
         <Col size={1}>
           <div id="product_grid">

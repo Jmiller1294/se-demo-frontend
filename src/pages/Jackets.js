@@ -1,14 +1,18 @@
 import React from "react";
 import { Grid, Row, Col } from "../layout/Grid";
 import SideBar from "../layout/SideBar";
-import { fireProducts } from "../data/data";
+import NavBar from "../layout/NavBar";
+import TopHeader from "../layout/TopHeader";
+import { fireCatagories, fireProducts } from "../data/data";
 
 const Jackets= () => {
   return(
     <Grid>
+      <TopHeader />
+      <NavBar />
       <Row>
         <Col size={1}>
-          <SideBar products={fireProducts}/>
+          <SideBar products={fireCatagories}/>
         </Col>
         <Col size={1}>
           <div id="product_grid">

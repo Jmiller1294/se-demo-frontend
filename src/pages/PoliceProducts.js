@@ -1,30 +1,21 @@
 import React from "react";
 import { Grid, Row, Col } from "../layout/Grid";
+import TopHeader from "../layout/TopHeader";
+import NavBar from "../layout/NavBar";
 import SideBar from "../layout/SideBar";
+import { policeCategories } from "../data/data";
 import '../styles/Style.css';
 import '../styles/Shopping.css'
 
-const policeProducts = [
-  {
-    product: 'TASERS',
-    url: '/police-products/tasers'
-  },
-  {
-    product: 'VESTS',
-    url: '/police-products/vests'
-  },
-  {
-    product: 'VISORS',
-    url: '/police-products/visors'
-  },
-];
 
 const PoliceProducts = () => {
   return (
     <Grid>
+      <TopHeader />
+      <NavBar />
       <Row>
         <Col size={1}>
-          <SideBar products={policeProducts} />
+          <SideBar products={policeCategories} />
         </Col>
         <Col size={1}>
         <div id="product_grid">

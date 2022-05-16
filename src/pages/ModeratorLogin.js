@@ -60,7 +60,7 @@ const AdminLink = styled.a`
   
 `
 
-const AdminLogin = (props) => {
+const ModeratorLogin = (props) => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -105,7 +105,7 @@ const AdminLogin = (props) => {
       <TopHeader />
       <NavBar />
       <LoginForm>
-        <Header>Admin Sign-in</Header>
+        <Header>Moderator Sign-in</Header>
             <Label for="email"><b>Email</b></Label><br />
             <Input onChange={(e) => handleEmailChange(e)} type="text" placeholder="Enter Email" name="email" required />
             <br />
@@ -119,4 +119,4 @@ const AdminLogin = (props) => {
     </>
   )
 }
-export default AdminLogin;
+export default ModeratorLogin;

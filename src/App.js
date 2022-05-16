@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import FireProducts from './pages/FireProducts';
 import PoliceProducts from './pages/PoliceProducts';
 import AdminLogin from './pages/AdminLogin';
+import ModeratorLogin from './pages/ModeratorLogin';
 import Admin from './pages/Admin';
 import Moderator from './pages/Moderator';
 import Tasers from './pages/Tasers';
@@ -12,18 +13,16 @@ import Visors from './pages/Visors';
 import Jackets from './pages/Jackets';
 import Helmets from './pages/Helmets';
 import Goggles from './pages/Goggles';
-import NavBar from './layout/NavBar';
-import TopHeader from './layout/TopHeader';
+
 
 const App = () => {
   return (
     <>
-      <TopHeader />
-      <NavBar />
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/admin-login' element={<AdminLogin />} />
+        <Route exact path='/moderator-login' element={<ModeratorLogin />} />
         <Route exact path='/admin' element={<Admin />} />
         <Route exact path='/moderator' element={<Moderator />} />
         <Route exact path='/fire-products' element={<FireProducts />} />
