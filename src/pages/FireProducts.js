@@ -18,7 +18,7 @@ const FireProducts = () => {
       <NavBar />
       <Row>
         <Col size={1}>
-          <SideBar products={fireCatagories}/>
+          <SideBar products={fireCatagories} title={'FIRE PRODUCTS'}/>
         </Col>
         <Col size={4}>
           <div id="product_grid">

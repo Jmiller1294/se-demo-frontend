@@ -15,7 +15,7 @@ const PoliceProducts = () => {
       <NavBar />
       <Row>
         <Col size={1}>
-          <SideBar products={policeCategories} />
+          <SideBar products={policeCategories} title={'POLICE PRODUCTS'}/>
         </Col>
         <Col size={1}>
         <div id="product_grid">

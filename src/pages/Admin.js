@@ -9,13 +9,24 @@ const Container = styled.div`
   background-color: #ffffff;
   margin: 20px auto;
 `
+const Logout = styled.a`
+  text-decoration: none;
+  font-size: 17px;
+  
+`
+const Message = styled.span`
+  font-size: 17px;
+  color: #ffffff;
+  margin-right: 1100px;
+`
 
 const Admin = () => {
   return (
     <Grid>
-      <Row background={'#212121'} height={'35px'} padding={'10px'}>
+      <Row background={'#212121'} height={'35px'} padding={'10px 0 10px 10px'}>
         <Col size={1}>
-          <a href="/">Logout</a>
+          <Message>Hello, Admin</Message>
+          <Logout href="/">Logout</Logout>
         </Col>
       </Row>
       <Row background={'#d3d3d3'} height={'800px'}>
@@ -23,15 +34,15 @@ const Admin = () => {
           <AdminSideBar />
         </Col>
         <Col size={4}>
-          <h2>Dashboard</h2>
+          <h2>Admin Dashboard</h2>
           <Container>
-            jaasa
+            <h3>Orders</h3>
           </Container>
           <Container>
-            sada
+            <h3>New Users</h3>
           </Container>
           <Container>
-            ffff
+            <h3>New Products</h3>
           </Container>
         </Col>
       </Row>
