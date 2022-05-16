@@ -13,6 +13,7 @@ import Visors from './pages/Visors';
 import Jackets from './pages/Jackets';
 import Helmets from './pages/Helmets';
 import Goggles from './pages/Goggles';
+import Cart from './pages/Cart';
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         <Route exact path='/moderator-login' element={<ModeratorLogin />} />
         <Route exact path='/admin' element={<Admin />} />
         <Route exact path='/moderator' element={<Moderator />} />
+        <Route exact path='/cart' element={<Cart />} />
         <Route exact path='/fire-products' element={<FireProducts />} />
         <Route exact path='/police-products' element={<PoliceProducts />} />
         <Route exact path='/police-products/tasers' element={<Tasers />} />
